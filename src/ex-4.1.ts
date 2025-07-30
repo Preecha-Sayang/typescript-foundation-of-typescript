@@ -5,10 +5,12 @@ type User = {
 };
 
 function isAdult(user: User): boolean {
-  return user.age >= 18;
+  return (user.age?? 0 ) >= 18;
 }
 
 const result = isAdult({ id: "u01", name: "John" });
 console.log(result); // ควรได้ false
 
 // Error ที่เจอคือ
+// บรรทัดที่ 8 
+// เนื่องจากuser age ไม่มีค่าทำให้ error เราต้องกำหนดใน function ทำให้user.age มีค่าเป็น 0
