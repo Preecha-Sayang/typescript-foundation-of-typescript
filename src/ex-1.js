@@ -1,25 +1,22 @@
-function calculate(a: number, b: number, operator: string): number | string {
+function calculate(a, b, operator) {
   //Start Coding Here
-  let sum = 0;
-
-  switch(operator){
-    case "add" :
-      sum = a+b;
+  var sum = 0;
+  switch (operator) {
+    case "add":
+      sum = a + b;
       break;
-    case "multiply" :
-      sum = a*b;
+    case "multiply":
+      sum = a * b;
       break;
-    case "divide" :
-      sum = a-b;
+    case "divide":
+      sum = a - b;
       break;
-    case "mod" :
-      sum = a%b;
+    case "mod":
+      sum = a % b;
       break;
   }
-
   return sum == 0 ? "Invalid operator" : sum;
 }
-
 console.log(calculate(10, 5, "add")); // 15
 console.log(calculate(10, 5, "multiply")); // 50
 console.log(calculate(10, 5, "divide")); // 2
